@@ -1,11 +1,4 @@
 # Code Review
-## Sites to Review
-Review sites and add any useful info to the below:
-- https://vickieli.dev/hacking/code-review-101/
-- https://www.hackedu.com/blog/secure-code-review-best-practices
-- https://docs.guardrails.io/docs/category/vulnerabilities
-- https://github.com/softwaresecured/secure-code-review-checklist
-
 ## Manual Checks
 Identify where user input is received and handled:
 - Sources
@@ -27,7 +20,7 @@ Misc:
 - Take regex from app and add to a local app to see how regex works and if it can be bypassed, much faster than against remote app if auth is used etc. 
 - Check if any blacklists are used as opposed to whitelists, could be abused by different file extensions e.g. if extension `php` is blocked, `php5` or `PHP` might bypass.
 
-Use either tools to search codebase for keywords (will be covered in SAST too):
+Use either tools to search codebase for keywords:
 - Sublime Text `Ctrl+Shift+F` for global search of keywords
 - Grep
 ```
@@ -38,6 +31,7 @@ encode
 decode
 filter
 sanitize
+sanitise
 log
 http
 ```
@@ -56,10 +50,11 @@ DELETE
 UPDATE
 ```
 
-Hashing Algs
+Weak Hashing Algs
 ```
 SHA1
 MD5
+MD4
 ```
 
 Any functions that exeute code
@@ -72,11 +67,11 @@ os.
 
 Sublime supports regex searching, you need to enable regex on left of search popup `.*`
 ```
-AWS API keys `AKIA[0-9A-Z]{16}`
+AKIA[0-9A-Z]{16} #AWS API keys 
 ```
 
 ## SAST
-SAST (Static application security testing)
+SAST (Static Application Security Testing)
 
 ### Semgrep CLI 
 Install:
@@ -103,10 +98,9 @@ Use [Truffle Hog](https://github.com/trufflesecurity/trufflehog) to search for s
 **TO BE UPDATED**
 
 ### Attack Surface Detector
-Burp or ZAP addons
+[Attack Surface Detector](https://owasp.org/www-project-attack-surface-detector/) reveiws source code and detects the endpoints of a web application, the parameters these endpoints accept, and the data type of those parameters.
+- [Burp](https://portswigger.net/bappstore/47027b96525d4353aea5844781894fb1) addon can be installed from inside app.
+- ZAP addon can be installed from inside app.
 
 ### SonarQube
-Can locally deploy as open source
-
-## DAST
-DAST (Dynamic application security testing)
+[SonarQube](https://www.sonarqube.org/) can locally deploy as open source 
