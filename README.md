@@ -1,5 +1,3 @@
-## ----
-[Home](index.md)
 # Code Review
 ## Sites to Review
 Review sites and add any useful info to the below:
