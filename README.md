@@ -26,6 +26,7 @@ Check for any configure files as they contain config relating to:
 - User input and how its added to DB
 - Check if any functions are missing input validation
 - Take regex from app and add to a local app to see how regex works and if it can be bypassed, much faster than against remote app if auth is used etc. 
+- Check if any blacklists are used as opposed to whitelists, could be abused by different file extensions e.g. if extension `php` is blocked, `php5` or `PHP` might bypass.
 
 Use either tools to search codebase for keywords (will be covered in SAST too):
 - Sublime Text Ctrl+Shift+F for global search of keywords
@@ -91,7 +92,9 @@ Example use:
 semgrep --config "p/security-audit" --config "p/owasp-top-ten" --config "p/javascript" --metrics off -v -o output_file local_repo_folder_name
 ```
 
-Search for rules https://semgrep.dev/r  e.g. https://semgrep.dev/p/security-audit for security audit above
+Determine technologies used by codebase and then search for security rule sets https://semgrep.dev/r?cat=security to include as configs. e.g. https://semgrep.dev/p/clientside-js 
+
+[Wappalyzer browser extension](https://www.wappalyzer.com/apps) can be used to assist with detecting client side technologies. Although it should be easy to check file extensions and modules/libraries used in the code.
 
 To create rules https://r2c.dev/blog/2020/writing-semgrep-rules-a-methodology/ 
 
