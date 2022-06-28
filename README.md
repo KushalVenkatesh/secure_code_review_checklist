@@ -18,6 +18,7 @@ Check for any configure files as they contain config relating to:
 - File Upload
 - DB Access
 
+Misc:
 - Check for files that list all application routes to discover hidden paths e.g. used for admin access
 - Base 64 encoded sensitive data
 - Registration forms sent in GET
