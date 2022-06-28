@@ -1,4 +1,13 @@
+## ----
+[Home](index.md)
 # Code Review
+## Sites to Review
+Review sites and add any useful info to the below:
+- https://vickieli.dev/hacking/code-review-101/
+- https://www.hackedu.com/blog/secure-code-review-best-practices
+- https://docs.guardrails.io/docs/category/vulnerabilities
+- https://github.com/softwaresecured/secure-code-review-checklist
+
 ## Manual Checks
 Identify where user input is received and handled:
 - Sources
@@ -66,10 +75,10 @@ Sublime supports regex searching, you need to enable regex on left of search pop
 AWS API keys `AKIA[0-9A-Z]{16}`
 ```
 
-### SAST
+## SAST
 SAST (Static application security testing)
 
-#### Semgrep CLI 
+### Semgrep CLI 
 Install:
 ```bash
 python3 -m pip install semgrep
@@ -86,17 +95,16 @@ Search for rules https://semgrep.dev/r  e.g. https://semgrep.dev/p/security-audi
 
 To create rules https://r2c.dev/blog/2020/writing-semgrep-rules-a-methodology/ 
 
-#### Truffle Hog
+### Truffle Hog
 Use [Truffle Hog](https://github.com/trufflesecurity/trufflehog) to search for secrets
 
 **TO BE UPDATED**
 
-#### Attack Surface Detector
+### Attack Surface Detector
 Burp or ZAP addons
 
-#### SonarQube
+### SonarQube
 Can locally deploy as open source
 
-
-### DAST
+## DAST
 DAST (Dynamic application security testing)
