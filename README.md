@@ -28,7 +28,7 @@ Misc:
 - Check if any blacklists are used as opposed to whitelists, could be abused by different file extensions e.g. if extension `php` is blocked, `php5` or `PHP` might bypass.
 
 Use either tools to search codebase for keywords (will be covered in SAST too):
-- Sublime Text Ctrl+Shift+F for global search of keywords
+- Sublime Text `Ctrl+Shift+F` for global search of keywords
 - Grep
 ```
 secret
